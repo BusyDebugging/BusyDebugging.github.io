@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FFmpeg on BusyDebugging</title><link>https://demo.stack.jimmycai.com/tags/ffmpeg/</link><description>Recent content in FFmpeg on BusyDebugging</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 03 Nov 2023 09:59:29 +0000</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml"/><item><title>万能的多媒体转换器——FFmpeg</title><link>https://demo.stack.jimmycai.com/p/%E4%B8%87%E8%83%BD%E7%9A%84%E5%A4%9A%E5%AA%92%E4%BD%93%E8%BD%AC%E6%8D%A2%E5%99%A8ffmpeg/</link><pubDate>Fri, 03 Nov 2023 09:59:29 +0000</pubDate><guid>https://demo.stack.jimmycai.com/p/%E4%B8%87%E8%83%BD%E7%9A%84%E5%A4%9A%E5%AA%92%E4%BD%93%E8%BD%AC%E6%8D%A2%E5%99%A8ffmpeg/</guid><description>&lt;blockquote>
+&lt;p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;a href="https://baike.baidu.com/item/ffmpeg/2665727">&lt;cite>百度百科&lt;/cite>&lt;/a>&lt;/span>&lt;/blockquote>
+&lt;h2 id="基本使用">基本使用&lt;/h2>
+&lt;p>参考：&lt;a class="link" href="../%e7%ae%80%e5%8d%95%e7%9a%84%e7%bb%88%e7%ab%af%e6%93%8d%e4%bd%9c-windows%e7%af%87/" >简单的终端操作 - Windows篇&lt;/a>&lt;/p>
+&lt;p>最简单的使用方式如下：&lt;/p>
+&lt;p>&lt;code>ffmpeg -i 输入文件 输出文件&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>注：如果想直接使用ffmpeg，而不是定位到ffmpeg所在文件夹再使用，可以将&lt;code>ffmpeg.exe&lt;/code>放在&lt;code>C:\Windows\System32&lt;/code>下，也可以通过编辑环境变量来解决（&lt;a class="link" href="../%e4%ba%86%e8%a7%a3%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f/" >了解环境变量&lt;/a>）&lt;br>
+利用ffmpeg也可以快速地将视频转换成音频（示例如下第二条）&lt;/p>
+&lt;/blockquote>
+&lt;p>例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">ffmpeg -i input.flv output.mp4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ffmpeg -i input.mp4 output.mp3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>（文章仍在编辑中，未完待续……）&lt;/p></description></item></channel></rss>

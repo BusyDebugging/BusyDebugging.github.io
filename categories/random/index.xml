@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机琐事 on BusyDebugging</title><link>https://demo.stack.jimmycai.com/categories/random/</link><description>Recent content in 计算机琐事 on BusyDebugging</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 03 Nov 2023 10:52:19 +0000</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/random/index.xml" rel="self" type="application/rss+xml"/><item><title>了解环境变量</title><link>https://demo.stack.jimmycai.com/p/%E4%BA%86%E8%A7%A3%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link><pubDate>Fri, 03 Nov 2023 10:52:19 +0000</pubDate><guid>https://demo.stack.jimmycai.com/p/%E4%BA%86%E8%A7%A3%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid><description>&lt;h2 id="编辑中">编辑中&lt;/h2>
+&lt;p>本文仍在编辑中，先占个位置！&lt;/p></description></item><item><title>万能的多媒体转换器——FFmpeg</title><link>https://demo.stack.jimmycai.com/p/%E4%B8%87%E8%83%BD%E7%9A%84%E5%A4%9A%E5%AA%92%E4%BD%93%E8%BD%AC%E6%8D%A2%E5%99%A8ffmpeg/</link><pubDate>Fri, 03 Nov 2023 09:59:29 +0000</pubDate><guid>https://demo.stack.jimmycai.com/p/%E4%B8%87%E8%83%BD%E7%9A%84%E5%A4%9A%E5%AA%92%E4%BD%93%E8%BD%AC%E6%8D%A2%E5%99%A8ffmpeg/</guid><description>&lt;blockquote>
+&lt;p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;a href="https://baike.baidu.com/item/ffmpeg/2665727">&lt;cite>百度百科&lt;/cite>&lt;/a>&lt;/span>&lt;/blockquote>
+&lt;h2 id="基本使用">基本使用&lt;/h2>
+&lt;p>参考：&lt;a class="link" href="../%e7%ae%80%e5%8d%95%e7%9a%84%e7%bb%88%e7%ab%af%e6%93%8d%e4%bd%9c-windows%e7%af%87/" >简单的终端操作 - Windows篇&lt;/a>&lt;/p>
+&lt;p>最简单的使用方式如下：&lt;/p>
+&lt;p>&lt;code>ffmpeg -i 输入文件 输出文件&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>注：如果想直接使用ffmpeg，而不是定位到ffmpeg所在文件夹再使用，可以将&lt;code>ffmpeg.exe&lt;/code>放在&lt;code>C:\Windows\System32&lt;/code>下，也可以通过编辑环境变量来解决（&lt;a class="link" href="../%e4%ba%86%e8%a7%a3%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f/" >了解环境变量&lt;/a>）&lt;br>
+利用ffmpeg也可以快速地将视频转换成音频（示例如下第二条）&lt;/p>
+&lt;/blockquote>
+&lt;p>例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">ffmpeg -i input.flv output.mp4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ffmpeg -i input.mp4 output.mp3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>（文章仍在编辑中，未完待续……）&lt;/p></description></item><item><title>简单的终端操作 - Windows篇</title><link>https://demo.stack.jimmycai.com/p/%E7%AE%80%E5%8D%95%E7%9A%84%E7%BB%88%E7%AB%AF%E6%93%8D%E4%BD%9C-windows%E7%AF%87/</link><pubDate>Fri, 03 Nov 2023 08:15:29 +0000</pubDate><guid>https://demo.stack.jimmycai.com/p/%E7%AE%80%E5%8D%95%E7%9A%84%E7%BB%88%E7%AB%AF%E6%93%8D%E4%BD%9C-windows%E7%AF%87/</guid><description>&lt;h2 id="认识终端">认识终端&lt;/h2>
+&lt;h3 id="路径">路径&lt;/h3>
+&lt;p>终端界面通常是一个纯色的窗口，没有GUI，并且操作主要是输入命令。刚打开终端，通常会看到一行提示，内容大致如下（以命令提示符&lt;code>cmd.exe&lt;/code>为例）：&lt;/p>
+&lt;p>&lt;code>C:\Users\username&amp;gt;&lt;/code>&lt;/p>
+&lt;p>这里显示的路径为当前的所在目录，没有输入绝对路径的操作（绝对路径例如：&lt;code>D:\Data\Videos\foo.mp4&lt;/code>）会被以相对路径方式处理，终端会在当前文件夹下寻找对应文件名的文件（如直接输入&lt;code>bar.mp4&lt;/code>，则实际指向的文件是&lt;code>C:\Users\username\bar.mp4&lt;/code>）。&lt;/p>
+&lt;h3 id="更改路径">更改路径&lt;/h3>
+&lt;p>想要更改路径，可以使用命令 &lt;code>cd 目的地路径&lt;/code>（例：&lt;code>cd D:\Data\MyFiles&lt;/code>）。特别注意：在命令提示符（&lt;code>cmd.exe&lt;/code>）下，如果目的地路径盘符与当前盘符不同（盘符例：&lt;code>C:&lt;/code> 或 &lt;code>D:&lt;/code> 或 &lt;code>E:&lt;/code>），则需要再输入一行盘符（例如直接输入&lt;code>D:&lt;/code>）来更改路径。&lt;/p>
+&lt;blockquote>
+&lt;p>注：PowerShell下可以直接更改路径，无需输入盘符。&lt;strong>如无特殊需求，建议使用PowerShell进行操作，更加方便&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>方便起见，在使用终端操作的时候，尽量把当前目录更改为你要进行操作的工作目录，这样就可以使用不用把绝对路径全部写出的相对路径，输入文件名即可，省时省力。&lt;/p>
+&lt;p>如果需要前进至某个目录，或者返回至上一个目录，可以参考以下方法：&lt;/p>
+&lt;p>前进：&lt;code>cd .\NextFolder&lt;/code> &lt;br>
+返回至上一个目录（也称父目录）：&lt;code>cd ..&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>注：当前目录可以用一个英文句点 &lt;code>.&lt;/code> 代替，而父目录可以用两个英文句点 &lt;code>..&lt;/code> 代替。&lt;br>
+路径中的 &lt;code>\&lt;/code> 和 &lt;code>/&lt;/code> 如无特殊情况，一般含义相同&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="使用终端">使用终端&lt;/h2>
+&lt;h3 id="运行程序">运行程序&lt;/h3>
+&lt;p>例：当前目录下有如下文件：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl"> 目录: D:\demo\folder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Mode LastWriteTime Length Name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---- ------------- ------ ----
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-a---- 2023/11/3 16:46 204 archive.zip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-a---- 2023/11/3 15:47 11134540 galaxy brain meme.mp4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-a---- 2023/11/3 16:45 0 random.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-a---- 2023/10/21 12:29 655275 test_cmd.exe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>注：此处使用PowerShell操作。如无特殊说明，后文的操作均使用PowerShell进行。&lt;br>
+此处使用了 &lt;code>ls&lt;/code> 命令进行查看，也可以使用 &lt;code>dir&lt;/code> 命令，但是在命令提示符中则无法使用 &lt;code>ls&lt;/code> 命令。&lt;br>
+PowerShell的 &lt;code>ls&lt;/code> 命令与其别名机制有关，命令输出的详细释义和命令本身的更多使用方法也会在日后进行介绍。&lt;/p>
+&lt;/blockquote>
+&lt;p>从 &lt;code>Name&lt;/code> 一栏可以看出，目录下总共有$4$个文件：&lt;code>archive.zip&lt;/code>，&lt;code>galaxy brain meme.mp4&lt;/code>，&lt;code>random.txt&lt;/code>，&lt;code>test_cmd.exe&lt;/code>，输出按照字典序排序。现在，如果想使用&lt;code>test_cmd.exe&lt;/code>对某个文件进行处理，可以使用如下命令：&lt;/p>
+&lt;p>&lt;code>./test_cmd &amp;quot;galaxy brain meme.mp4&amp;quot; output.mp4&lt;/code>&lt;/p>
+&lt;p>在终端内运行&lt;code>.exe&lt;/code>（或&lt;code>.com&lt;/code>等）扩展名的应用程序时，可以省略扩展名。&lt;br>
+在引用文件名或路径含有空格的文件时，需要注意把整个路径用&lt;strong>双引号&lt;/strong>（在PowerShell中也可为单引号）括起来，否则文件名会被空格分割，被识别为多个参数。&lt;/p>
+&lt;blockquote>
+&lt;p>注：PowerShell中可以不加 &lt;code>./&lt;/code> 前缀直接运行命令，但是由于其设置，在当前文件夹下的命令不能直接按照这种方式运行，否则会报出以下错误：&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">test_cmd.exe : 无法将“test_cmd.exe”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">所在位置 行:1 字符: 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+ test_cmd.exe
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+ ~~~~~~~~~~~~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + CategoryInfo : ObjectNotFound: (test_cmd.exe:String) [], CommandNotFoundException
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + FullyQualifiedErrorId : CommandNotFoundException
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同时，PowerShell也会有以下提示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Suggestion [3,General]: 找不到命令 test_cmd.exe，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入“.\test_cmd.exe”。有关详细信息，请参阅 &amp;#34;get-help about_Command_Precedence&amp;#34;。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="命令补全">命令补全&lt;/h3>
+&lt;p>在选择文件或者输入命令时，可以使用&lt;code>Tab&lt;/code>键（&lt;code>Tab&lt;/code>键一般位于&lt;code>Caps Lock&lt;/code>大写锁定键的上方）进行命令补全，可以大大提升输入效率。&lt;/p>
+&lt;p>还是上面的例子，想要运行&lt;code>test_cmd.exe&lt;/code>，可以先输入&lt;code>test&lt;/code>（任意前缀都可以，但是前缀内容越详细，匹配的范围越小，找到想要命令或文件的速度越快），然后按下&lt;code>Tab&lt;/code>键，此时就会自动补全&lt;code>.\test_cmd.exe&lt;/code>命令。快速输入文件名同理。&lt;/p>
+&lt;p>如果文件夹下有多个相同前缀的文件名的文件，输入前缀后未必是你想要的文件，可以再次按下&lt;code>Tab&lt;/code>键切换不同文件，直到变为目标文件为止。若文件过多，可以按照上文的操作扩充前缀。&lt;/p>
+&lt;h3 id="强制终止">强制终止&lt;/h3>
+&lt;p>使用 &lt;code>Ctrl + C&lt;/code> 键可以强制终止当前正在运行的进程，并返回到终端。在终端里输入命令时也可以随时按下 &lt;code>Ctrl + C&lt;/code> 键来取消执行当前命令，清空输入。&lt;/p>
+&lt;blockquote>
+&lt;p>注：在PowerShell中使用 &lt;code>Ctrl + C&lt;/code> 键会使终端输出红色的 &lt;code>^C&lt;/code> 以标注操作。&lt;/p>
+&lt;/blockquote></description></item><item><title>如何截屏 / 录屏</title><link>https://demo.stack.jimmycai.com/p/%E5%A6%82%E4%BD%95%E6%88%AA%E5%B1%8F-/-%E5%BD%95%E5%B1%8F/</link><pubDate>Fri, 03 Nov 2023 07:13:48 +0000</pubDate><guid>https://demo.stack.jimmycai.com/p/%E5%A6%82%E4%BD%95%E6%88%AA%E5%B1%8F-/-%E5%BD%95%E5%B1%8F/</guid><description>&lt;h2 id="截屏">截屏&lt;/h2>
+&lt;h3 id="print-screen-键">&lt;code>Print Screen&lt;/code> 键&lt;/h3>
+&lt;p>这个按键一般位于键盘的最上方一行，在 &lt;code>insert&lt;/code> 键上方。按下它就能够把整个屏幕的截图保存在剪切板，用 &lt;code>Ctrl + V&lt;/code> 就能将其粘贴出来。&lt;/p>
+&lt;p>另外，如果同时按下 &lt;code>Alt + Print Screen&lt;/code> 键，就能够获取当前窗口的截图，使用方法同上。&lt;/p>
+&lt;p>在 Windows 11 中，&lt;code>Print Screen&lt;/code> 键会唤起系统截图，使用方法请参阅下文。&lt;/p>
+&lt;h3 id="win--shift--s-键">&lt;code>Win + Shift + S&lt;/code> 键&lt;/h3>
+&lt;p>在 Win 10 / 11 中，这个组合键能够唤起系统截屏，上方会显示四种模式和一个关闭按钮：&lt;/p>
+&lt;h4 id="矩形模式">矩形模式&lt;/h4>
+&lt;p>用鼠标圈出一块矩形区域，然后松开鼠标，就能进行截图。&lt;/p>
+&lt;h4 id="自由形状模式">自由形状模式&lt;/h4>
+&lt;p>用鼠标圈出一块任意形状的区域，然后松开鼠标，就能进行截图。&lt;/p>
+&lt;h4 id="窗口模式">窗口模式&lt;/h4>
+&lt;p>用鼠标点击需要截图的窗口，就能进行截图。&lt;/p>
+&lt;h4 id="全屏模式">全屏模式&lt;/h4>
+&lt;p>点击该模式的按钮后，就会对全屏进行截图。&lt;/p>
+&lt;p>截图完成后会将图片保存到剪切板中，一般可以直接点击右侧通知栏的截屏信息来修改和保存截图。&lt;/p>
+&lt;h3 id="截图工具">截图工具&lt;/h3>
+&lt;p>这个工具存在于 Win 7 ~ 11 中，可通过在开始菜单搜索“截图工具”打开，具体截图方式可以参照软件内指引。&lt;/p>
+&lt;h2 id="录屏">录屏&lt;/h2>
+&lt;h3 id="win--alt--r-键">&lt;code>Win + Alt + R&lt;/code> 键&lt;/h3>
+&lt;p>按下之后启动 Xbox Game Bar的捕获功能（一般默认安装于 Win 10 / 11 当中），录制过程中默认会在右上方显示悬浮窗，能够显示当前录制的时长，控制麦克风开关和停止录制。录制结束后可以按下 &lt;code>Win + G&lt;/code> 来查看录制的视频，默认保存于系统视频文件夹中。&lt;/p>
+&lt;h3 id="obs-studio">OBS Studio&lt;/h3>
+&lt;p>&lt;strong>官网：&lt;a class="link" href="https://obsproject.com/" target="_blank" rel="noopener"
+>https://obsproject.com&lt;/a>&lt;/strong>&lt;/p>
+&lt;p>一款开源、专业的直播 / 录制软件。一定要在上方的官网上下载，搜索引擎的结果可能是假的官网。按照自己的系统下载对应版本的安装包后，打开并安装。第一次启动会进行初始设置，按照提示和自己的喜好进行设置即可。&lt;/p>
+&lt;p>设置完成后，先点击“来源”底下的“+”添加来源，常用选项为显示器采集和窗口采集。显示器采集能够捕获整个屏幕，而窗口采集能够精准捕获某一个窗口的视频。&lt;/p></description></item></channel></rss>
