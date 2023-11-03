@@ -1,5 +1,5 @@
 ---
-title: Links
+title: 友情链接
 links:
   - title: GitHub
     description: GitHub is the world's largest software development platform.
@@ -12,9 +12,10 @@ menu:
             icon: link
 
 comments: false
+draft: true
 ---
 
-To use this feature, add `links` section to frontmatter.
+<!-- To use this feature, add `links` section to frontmatter.
 
 This page's frontmatter:
 
@@ -30,4 +31,4 @@ links:
     image: ts-logo-128.jpg
 ```
 
-`image` field accepts both local and external images.
+`image` field accepts both local and external images. -->
