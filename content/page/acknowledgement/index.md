@@ -1,5 +1,6 @@
 ---
 title: 鸣谢
+slug: "acknowledgement"
 links:
   - title: Wang Tianze aka qyjy
     description: BusyDebugging各项目维护者（调试、文档）
