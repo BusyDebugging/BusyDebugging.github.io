@@ -2,8 +2,8 @@
 title: 鸣谢
 slug: "acknowledgement"
 links:
-  - title: Wang Tianze aka qyjy
-    description: BusyDebugging各项目维护者（调试、文档）
+  - title: qyjy
+    description: 吉祥物
     website: https://space.bilibili.com/399733381
     image: ./qyjy.webp
 menu:
